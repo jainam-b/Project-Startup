@@ -7,7 +7,7 @@ const app = new Hono<{
     DATABASE_URL: string;
   };
 }>();
-
+// routes
 app.post(" /api/v1/user/signup", (c) => {
   const prisma = new PrismaClient({
     datasourceUrl: c.env.DATABASE_URL,
